@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 require('dotenv').config();
 // const dbstart=process.env.DB_LOCAL;
-const dbstart=process.env.db_server;
+const dbstart=process.env.DB_SERVER;
 
 mongoose
   .connect(dbstart)
