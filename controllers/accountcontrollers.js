@@ -31,7 +31,7 @@ async function createUser(req, res) {
     var result = await newrecord.save();
     if (result) {
       const mailOptions = {
-        from: "supermarket890@hotmail.com",
+        from: "dk7527162@hotmail.com",
         to: req.body.uname,
         subject: "Activate your account :: SuperMarket.com",
         text: `Dear ${req.body.pname}\n\n Thanks for signing up on our website. Click on the following link to activate your account\n\n http://localhost:3000/activate?token=${token}`,
@@ -135,7 +135,7 @@ try {
   var result = await newrecord.save();
   if (result) {
     const mailOptions = {
-      from: "supermarket890@hotmail.com",
+      from: "dk7527162@hotmail.com",
       to: req.body.uname,
       subject: "Activate your account :: SuperMarket.com",
       text: `Dear ${req.body.pname}\n\n Thanks for signing up on our website. Click on the following link to activate your account\n\n http://localhost:3000/activate?token=${token}`,
@@ -235,7 +235,7 @@ try {
     if (saveresult) {
       const resetLink = `http://localhost:3000/resetpassword?token=${resettoken}`;
       const mailOptions = {
-        from: "supermarket890@hotmail.com",
+        from: "dk7527162@hotmail.com",
         to: req.query.un,
         subject: "Reset your password::ShoppingPlaza.com",
         text: `Hi ${result.name},\n\n Please click on the following link to reset your password: \n\n ${resetLink}`,
@@ -359,8 +359,8 @@ res.status(500).send({ statuscode: -1, msg: "Some error occured" });
 
 async function contactUs(req,res){
   const mailOptions = {
-    from: "supermarket890@hotmail.com",
-    to: "supermarket890@hotmail.com",
+    from: "dk7527162@hotmail.com",
+    to: "dk7527162@hotmail.com",
     subject: "Message from Website - Contact Us",
     text: `Name:- ${req.body.name}\nPhone:-${req.body.phone}\nEmail:-${req.body.email}\nMessage:-${req.body.msg}`,
   };
